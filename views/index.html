@@ -1,0 +1,65 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="💐 EMOJI BOUQUET 💐">
+
+    <title>💐 EMOJI BOUQUET 💐</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+      <text y=%22.9em%22 font-size=%2290%22>💐</text>
+    </svg>">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/vue.min.js"></script>
+    <script src="/underscore-min.js"></script>
+    <script src="/graphemesplitter.js"></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>💐 <span class="rainbow-text">EMOJI BOUQUET</span> 💐</h1>
+    </header>
+
+    <main>
+      <div id="app">
+        <form>
+          <div class="form-group">
+            <label for="text">Emojis in your bouquet: </label>
+            <input class="form-control" id="text" type="text" name="text" v-model="text" />
+          </div>
+          <div class="form-group">
+            <label for="text">Character to hold space: </label>
+            <input class="form-control" id="spaceChar" type="text" name="spaceChar" v-model="spaceChar" />
+          </div>
+          <div class="form-group">
+            <label for="pattern">Bouquet Pattern:</label>
+            <!-- <textarea id="pattern" name="pattern" rows="10" cols="10" v-model="pattern"></textarea> -->
+            <select id="pattern_name" name="pattern_name" v-model="pattern_name">
+              <option>acab</option>
+              <option>fuck_trump</option>
+              <option>blm</option>
+              <option>bouquet</option>
+              <option>diagonal</option>
+              <option>wave</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea rows="10" v-model="pattern" readonly></textarea>
+          </div>
+        </form>
+        <textarea wrap="off" rows="20" id="output" name="output" v-html="output" readonly></textarea>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>🦶🏻🦶🏼🦶🏽🦶🏾🦶🏿 footer 🦶🏿🦶🏾🦶🏽🦶🏼🦶🏻</footer>
+  </body>
+</html>
