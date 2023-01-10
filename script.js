@@ -98,7 +98,7 @@ var app = new Vue({
         random: true,
         spaceChar: '🧘🏿‍♀️',
     //      pattern: "012345\n101234\n210123\n321012\n432101\n543210"
-        pattern_name: 'fuck_trump',
+        pattern_name: 'bouquet',
         pattern: ''
     },
     computed: {
